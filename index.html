@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Méridien Saigon | Khách Sạn 5 Sao Bên Sông Sài Gòn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "meridien-blue": "#1a202c",
+              "meridien-gold": "#A17C5B",
+              "meridien-light": "#f7f7f7",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .sticky-nav {
+        backdrop-filter: blur(10px);
+        background-color: rgba(26, 32, 44, 0.95);
+      }
+    </style>
+  </head>
+  <body class="bg-meridien-light text-meridien-blue font-sans">
+    <header id="main-header" class="sticky top-0 z-50 shadow-lg sticky-nav">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="flex items-center justify-between h-20">
+          <div class="flex-shrink-0">
+            <a
+              href="#home"
+              class="text-2xl font-serif font-bold text-white tracking-widest"
+            >
+              LE MÉRIDIEN SAIGON
+            </a>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="#about"
+                class="text-white hover:text-meridien-gold px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+                >Giới Thiệu</a
+              >
+              <a
+                href="#rooms"
+                class="text-white hover:text-meridien-gold px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+                >Phòng</a
+              >
+              <a
+                href="#dining"
+                class="text-white hover:text-meridien-gold px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+                >Ẩm Thực</a
+              >
+              <a
+                href="#services"
+                class="text-white hover:text-meridien-gold px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+                >Dịch Vụ</a
+              >
+              <a
+                href="#meetings"
+                class="text-white hover:text-meridien-gold px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+                >Hội Họp</a
+              >
+              <a
+                href="#offers"
+                class="text-white hover:text-meridien-gold px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+                >Ưu Đãi</a
+              >
+              <a
+                href="tel:+842862636688"
+                class="bg-meridien-gold text-white hover:bg-opacity-90 px-4 py-2 rounded-full text-sm font-bold transition duration-300 shadow-md"
+              >
+                ĐẶT PHÒNG
+              </a>
+            </div>
+          </div>
+          <button
+            id="mobile-menu-button"
+            type="button"
+            class="md:hidden p-2 rounded-md text-white hover:text-meridien-gold"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg
+              class="block h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </nav>
+      </div>
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#about"
+            class="text-white hover:bg-meridien-gold block px-3 py-2 rounded-md text-base font-medium"
+            >Giới Thiệu</a
+          >
+          <a
+            href="#rooms"
+            class="text-white hover:bg-meridien-gold block px-3 py-2 rounded-md text-base font-medium"
+            >Phòng</a
+          >
+          <a
+            href="#dining"
+            class="text-white hover:bg-meridien-gold block px-3 py-2 rounded-md text-base font-medium"
+            >Ẩm Thực</a
+          >
+          <a
+            href="#services"
+            class="text-white hover:bg-meridien-gold block px-3 py-2 rounded-md text-base font-medium"
+            >Dịch Vụ</a
+          >
+          <a
+            href="#meetings"
+            class="text-white hover:bg-meridien-gold block px-3 py-2 rounded-md text-base font-medium"
+            >Hội Họp</a
+          >
+          <a
+            href="#offers"
+            class="text-white hover:bg-meridien-gold block px-3 py-2 rounded-md text-base font-medium"
+            >Ưu Đãi</a
+          >
+          <a
+            href="tel:+842862636688"
+            class="bg-meridien-gold text-white hover:bg-opacity-90 block px-3 py-2 rounded-md text-base font-medium mt-2 text-center"
+          >
+            ĐẶT PHÒNG NGAY
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="home"
+        class="relative flex items-center justify-center text-white h-screen"
+        style="
+          background-image: url('theme.jpg');
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative z-10 text-center p-6">
+          <h1
+            class="text-4xl md:text-6xl font-serif font-extrabold mb-4 tracking-wider"
+          >
+            LE MÉRIDIEN SAIGON
+          </h1>
+          <p class="text-xl md:text-2xl font-light mb-8">
+            Nơi Cảm Hứng Nghệ Thuật Giao Hòa Cùng Phong Cách Sống Hiện Đại
+          </p>
+          <a
+            href="tel:+842862636688"
+            class="bg-meridien-gold hover:bg-opacity-90 text-white text-lg font-bold py-3 px-8 rounded-full shadow-xl transition duration-300 transform hover:scale-105"
+          >
+            ĐẶT PHÒNG NGAY
+          </a>
+          <p class="mt-4 text-sm font-medium">Liên Hệ: +84 28 6263 6688</p>
+        </div>
+      </section>
+
+      <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-3xl md:text-4xl font-serif font-bold text-center mb-12 border-b-2 border-meridien-gold pb-2 mx-auto max-w-lg"
+          >
+            GIỚI THIỆU VỀ KHÁCH SẠN
+          </h2>
+          <div class="lg:flex lg:space-x-12">
+            <div class="lg:w-2/3 mb-8 lg:mb-0">
+              <p class="text-lg leading-relaxed mb-4">
+                Khách sạn thuộc tập đoàn
+                <strong class="text-meridien-gold"
+                  >Marriott International</strong
+                >. Với vị trí thuận lợi ngay bên bờ
+                <strong class="text-meridien-gold">sông Sài Gòn</strong>, khách
+                sạn Le Méridien Saigon cung cấp dịch vụ 5 sao bao gồm phòng nghỉ
+                tiện nghi với thiết kế hiện đại, nhà hàng và phòng họp cho hội
+                nghị - sự kiện.
+              </p>
+              <p class="text-lg leading-relaxed">
+                Từ khách sạn, du khách có thể dễ dàng di chuyển tới các khu
+                trung tâm tài chính, giải trí và địa điểm tham quan nổi tiếng
+                hay đến Sân Bay Quốc Tế Tân Sơn Nhất trong bán kính 7km.
+              </p>
+              <div class="mt-8">
+                <img
+                  src="https://placehold.co/800x450/e0e0e0/333333?text=[Image+of+Le+Meridien+Saigon+Interior]"
+                  alt="Nội thất sang trọng của Le Méridien Saigon"
+                  class="w-full h-auto rounded-xl shadow-2xl"
+                />
+              </div>
+            </div>
+            <div
+              class="lg:w-1/3 bg-meridien-blue text-white p-8 rounded-xl shadow-2xl"
+            >
+              <h3 class="text-2xl font-serif font-bold mb-6 text-meridien-gold">
+                LỢI ÍCH KHI ĐẶT PHÒNG TRỰC TIẾP
+              </h3>
+              <ul class="space-y-4 text-lg">
+                <li class="flex items-start">
+                  <span class="text-meridien-gold mr-3">⭐</span>
+                  <span
+                    >Tích điểm
+                    <strong class="font-bold">Marriott Bonvoy</strong></span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <span class="text-meridien-gold mr-3">💰</span>
+                  <span
+                    >Ưu đãi
+                    <strong class="font-bold">giá tốt nhất</strong></span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <span class="text-meridien-gold mr-3">🔑</span>
+                  <span
+                    >Nhận ưu đãi dành cho thẻ
+                    <strong class="font-bold">Club Marriott</strong></span
+                  >
+                </li>
+              </ul>
+              <button
+                class="w-full mt-8 bg-meridien-gold text-meridien-blue hover:bg-opacity-80 font-bold py-3 rounded-lg transition duration-300 shadow-lg"
+              >
+                KHÁM PHÁ THÊM
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="rooms" class="py-16 md:py-24 bg-meridien-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-3xl md:text-4xl font-serif font-bold text-center mb-12 border-b-2 border-meridien-gold pb-2 mx-auto max-w-lg"
+          >
+            CÁC LOẠI PHÒNG NGHỈ
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-500"
+            >
+              <img
+                src="Premier classic.jpg"
+                alt="Phòng Premier Classic"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-serif font-bold mb-2">
+                  Premier Classic, River View
+                </h3>
+                <p class="text-sm text-gray-500 mb-4">
+                  38 m² | Giường: King/Đôi | Max: 3 Khách
+                </p>
+                <ul class="text-sm space-y-2 list-none pl-0">
+                  <li class="flex items-center">
+                    <span class="text-meridien-gold mr-2">✓</span> Phòng không
+                    hút thuốc
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-meridien-gold mr-2">✓</span> Bàn làm việc
+                    rộng rãi
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-meridien-gold mr-2">✓</span> Bồn tắm kiểu
+                    Pháp & vòi sen phun mưa
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-meridien-gold mr-2">✓</span> Bộ chăm sóc
+                    cá nhân Malin + Goetz
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-500"
+            >
+              <img
+                src="club classic.jpg"
+                alt="Phòng Club Classic"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-serif font-bold mb-2">
+                  Club Classic, City View
+                </h3>
+                <p class="text-sm text-gray-500 mb-4">
+                  38 m² | Giường: King/Đôi | Max: 3 Khách
+                </p>
+                <ul class="text-sm space-y-2 list-none pl-0">
+                  <li class="flex items-center">
+                    <span class="text-meridien-gold mr-2">✓</span> Phòng không
+                    hút thuốc
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-meridien-gold mr-2">✓</span>
+                    Tận hưởng Concierge/Club Lounge
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-meridien-gold mr-2">✓</span> Bàn làm việc
+                    rộng rãi
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-meridien-gold mr-2">✓</span> Bộ chăm sóc
+                    cá nhân Malin + Goetz
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-500"
+            >
+              <img
+                src="grande suite.jpg"
+                alt="Phòng Grande Suite"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-serif font-bold mb-2">
+                  Grande Suite (Luxury)
+                </h3>
+                <p class="text-sm text-gray-500 mb-4">
+                  68 m² | Giường: King | Max: 3 Khách
+                </p>
+                <ul class="text-sm space-y-2 list-none pl-0">
+                  <li class="flex items-center">
+                    <span class="text-meridien-gold mr-2">✓</span>
+                    Phòng khách & Phòng ngủ riêng biệt
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-meridien-gold mr-2">✓</span>
+                    Tận hưởng Concierge/Club Lounge
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-meridien-gold mr-2">✓</span> Bàn làm việc
+                    rộng rãi
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-meridien-gold mr-2">✓</span> Bồn tắm kiểu
+                    Pháp & vòi sen phun mưa
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-12">
+            <a
+              href="tel:+842862636688"
+              class="bg-meridien-blue text-white hover:bg-meridien-gold hover:text-meridien-blue py-3 px-8 rounded-full text-lg font-bold transition duration-300 shadow-lg"
+            >
+              XEM TẤT CẢ PHÒNG
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="dining" class="py-16 md:py-24 bg-meridien-blue text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-3xl md:text-4xl font-serif font-bold text-center mb-6 border-b-2 border-meridien-gold pb-2 mx-auto max-w-lg"
+          >
+            NHÀ HÀNG + BAR
+          </h2>
+          <p class="text-center text-lg mb-12 max-w-3xl mx-auto font-light">
+            Ẩm thực truyền cảm hứng. Thêm trải nghiệm mới cho hành trình ẩm thực
+            tại TP. Hồ Chí Minh với Le Méridien Saigon và khám phá thêm nhiều
+            hương vị độc đáo là thành quả của sự kết hợp giữa ẩm thực quốc tế và
+            Việt Nam.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-10">
+            <div class="bg-white text-meridien-blue p-8 rounded-xl shadow-2xl">
+              <h3 class="text-2xl font-serif font-bold text-meridien-gold mb-3">
+                AKUNA Restaurant
+              </h3>
+              <p class="text-sm mb-4">Liên Hệ: 091 173 58 00 | Giá: VND</p>
+              <ul class="text-base space-y-3">
+                <li class="flex items-center">
+                  <span class="font-bold w-32">Ẩm Thực:</span>
+                  <span class="flex-1"
+                    >Nhà hàng sao Michelin, Cao cấp; quầy bếp mở và rượu vang
+                    thượng hạng.</span
+                  >
+                </li>
+                <li class="flex items-center">
+                  <span class="font-bold w-32">Giờ Hoạt Động:</span>
+                  <span class="flex-1">18:00 - 22:00, từ Thứ 3 - Thứ 7.</span>
+                </li>
+                <li class="flex items-center">
+                  <span class="font-bold w-32">Khác:</span>
+                  <span class="flex-1">Nhận tổ chức sự kiện riêng.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white text-meridien-blue p-8 rounded-xl shadow-2xl">
+              <h3 class="text-2xl font-serif font-bold text-meridien-gold mb-3">
+                BARSON
+              </h3>
+              <p class="text-sm mb-4">Liên Hệ: 055 922 7766 | Giá: VND</p>
+              <ul class="text-base space-y-3">
+                <li class="flex items-center">
+                  <span class="font-bold w-32">Ẩm Thực:</span>
+                  <span class="flex-1"
+                    >Quốc tế, phục vụ cà phê + cocktails, All-day dining; Bữa
+                    trưa tiện lợi.</span
+                  >
+                </li>
+                <li class="flex items-center">
+                  <span class="font-bold w-32">Giờ Hoạt Động:</span>
+                  <span class="flex-1">Hàng ngày, 07:00 - Midnight.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="py-16 md:py-24 bg-meridien-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-3xl md:text-4xl font-serif font-bold text-center mb-12 border-b-2 border-meridien-gold pb-2 mx-auto max-w-lg"
+          >
+            DỊCH VỤ & TIỆN NGHI
+          </h2>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-6 text-center"
+          >
+            <div
+              class="p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300"
+            >
+              <img
+                src="https://placehold.co/100x100/A17C5B/ffffff?text=POOL"
+                alt="Hồ bơi khách sạn"
+                class="w-16 h-16 mx-auto mb-2 rounded-full"
+              />
+              <p class="font-semibold text-sm">Hồ bơi</p>
+            </div>
+            <div
+              class="p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300"
+            >
+              <img
+                src="https://placehold.co/100x100/A17C5B/ffffff?text=GYM"
+                alt="Phòng tập thể thao"
+                class="w-16 h-16 mx-auto mb-2 rounded-full"
+              />
+              <p class="font-semibold text-sm">Phòng tập thể thao</p>
+            </div>
+            <div
+              class="p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300"
+            >
+              <img
+                src="https://placehold.co/100x100/A17C5B/ffffff?text=SPA"
+                alt="Explore Spa"
+                class="w-16 h-16 mx-auto mb-2 rounded-full"
+              />
+              <p class="font-semibold text-sm">Explore Spa</p>
+            </div>
+            <div
+              class="p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300"
+            >
+              <img
+                src="https://placehold.co/100x100/A17C5B/ffffff?text=BUS"
+                alt="Trung tâm dịch vụ văn phòng"
+                class="w-16 h-16 mx-auto mb-2 rounded-full"
+              />
+              <p class="font-semibold text-sm">Trung tâm dịch vụ văn phòng</p>
+            </div>
+            <div
+              class="p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300"
+            >
+              <img
+                src="https://placehold.co/100x100/A17C5B/ffffff?text=TOUR"
+                alt="Dịch vụ đặt tour du lịch"
+                class="w-16 h-16 mx-auto mb-2 rounded-full"
+              />
+              <p class="font-semibold text-sm">Dịch vụ đặt tour</p>
+            </div>
+            <div
+              class="p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300"
+            >
+              <img
+                src="https://placehold.co/100x100/A17C5B/ffffff?text=CON"
+                alt="Dịch vụ Concierge"
+                class="w-16 h-16 mx-auto mb-2 rounded-full"
+              />
+              <p class="font-semibold text-sm">Concierge</p>
+            </div>
+            <div
+              class="p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300"
+            >
+              <img
+                src="https://placehold.co/100x100/A17C5B/ffffff?text=PARK"
+                alt="Tầng hầm gửi xe"
+                class="w-16 h-16 mx-auto mb-2 rounded-full"
+              />
+              <p class="font-semibold text-sm">Tầng hầm gửi xe</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="meetings" class="py-16 md:py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-3xl md:text-4xl font-serif font-bold text-center mb-12 border-b-2 border-meridien-gold pb-2 mx-auto max-w-lg"
+          >
+            HỘI HỌP + SỰ KIỆN
+          </h2>
+          <div class="grid md:grid-cols-2 gap-10">
+            <div class="p-8 bg-white rounded-xl shadow-2xl flex flex-col">
+              <h3 class="text-2xl font-serif font-bold text-meridien-blue mb-4">
+                Phòng Họp Đa Chức Năng
+              </h3>
+              <p class="text-lg leading-relaxed mb-4 flex-grow">
+                Khu vực hội nghị sự kiện tập trung cùng một tầng gồm
+                <strong class="text-meridien-gold">01 ballroom</strong> và
+                <strong class="text-meridien-gold">05 phòng họp</strong> với
+                vách ngăn chia phòng linh hoạt, phù hợp cho mọi quy mô sự kiện.
+              </p>
+              <div class="w-full h-64 md:h-80 overflow-hidden rounded-lg mt-4">
+                <img
+                  src="meeting room.jpg"
+                  alt="Phòng họp đa chức năng"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div class="p-8 bg-white rounded-xl shadow-2xl flex flex-col">
+              <h3 class="text-2xl font-serif font-bold text-meridien-blue mb-4">
+                Lễ Vu Quy Thanh Lịch
+              </h3>
+              <p class="text-lg leading-relaxed mb-4 flex-grow">
+                Tiệc cưới tại Le Méridien truyền cảm hứng bằng những chấm phá
+                tinh tế và lãng mạn xuyên suốt từng khoảnh khắc trong bữa tiệc.
+                Biến ngày trọng đại của bạn trở nên hoàn hảo và đáng nhớ.
+              </p>
+              <div class="w-full h-64 md:h-80 overflow-hidden rounded-lg mt-4">
+                <img
+                  src="Elegant wedding.jpg"
+                  alt="Tiệc cưới sang trọng"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="offers" class="py-16 md:py-24 bg-meridien-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-3xl md:text-4xl font-serif font-bold text-center mb-12 border-b-2 border-meridien-gold pb-2 mx-auto max-w-lg"
+          >
+            ƯU ĐÃI ĐẶC BIỆT
+          </h2>
+
+          <div class="grid lg:grid-cols-2 gap-10">
+            <div
+              class="bg-white rounded-xl shadow-2xl p-8 border-t-4 border-meridien-gold"
+            >
+              <h3 class="text-3xl font-serif font-bold text-meridien-gold mb-4">
+                ELITE STAYS, EXTRA POINTS
+              </h3>
+              <p class="text-lg font-semibold mb-4">Ưu đãi Phòng nghỉ</p>
+              <p class="text-base leading-relaxed mb-4">
+                Tận hưởng kỳ nghỉ thượng hạng tại Le Méridien Saigon. Thành viên
+                Marriott Bonvoy sẽ nhận thêm đến
+                <strong class="font-bold">5,000 điểm thưởng</strong> khi lưu trú
+                từ 3 đêm tại hạng phòng Club hoặc Suite.
+              </p>
+              <p class="text-base leading-relaxed mb-6">
+                Đặc quyền riêng tại
+                <strong class="font-bold">Club Lounge tầng 22</strong> cùng trải
+                nghiệm ẩm thực và nghỉ dưỡng tinh tế sẽ khiến mỗi khoảnh khắc
+                lưu trú trở nên đáng nhớ hơn.
+              </p>
+              <p class="text-sm font-medium text-gray-600">
+                Đặt phòng: Nay - 15.12.2025 | Lưu trú: Đến hết 31.12.2025.
+              </p>
+              <a
+                href="#"
+                class="inline-block mt-6 bg-meridien-blue text-white hover:bg-meridien-gold py-2 px-6 rounded-full font-semibold transition duration-300"
+              >
+                ĐẶT ƯU ĐÃI
+              </a>
+            </div>
+
+            <div
+              class="bg-white rounded-xl shadow-2xl p-8 border-t-4 border-meridien-gold"
+            >
+              <h3 class="text-3xl font-serif font-bold text-meridien-gold mb-4">
+                Hương Vị Hàn Quốc Tại Le Méridien
+              </h3>
+              <p class="text-lg font-semibold mb-4">Ưu đãi Ẩm thực</p>
+              <p class="text-base leading-relaxed mb-4">
+                Cùng thưởng thức buffet Hàn Quốc trong không khí
+                <strong class="font-bold">Hongdae rực rỡ</strong>, với K-pop,
+                ánh sáng và ẩm thực hòa quyện đầy hứng khởi.
+              </p>
+              <ul class="list-disc list-inside text-base ml-4 mb-6 space-y-1">
+                <li>
+                  <strong class="font-medium"
+                    >Cá hồi vua tartare cay kiểu Hàn</strong
+                  >
+                  - sự hòa quyện đậm đà.
+                </li>
+                <li>
+                  <strong class="font-medium">Bò A5 nướng BBQ</strong>, Purée
+                  kimchi và kem mắc-ca - kết hợp đầy sáng tạo.
+                </li>
+                <li>
+                  <strong class="font-medium">Cá ngừ với salsa cherry</strong>,
+                  xốt Gojuchang - giao thoa tinh tế.
+                </li>
+              </ul>
+              <p class="text-sm font-medium text-gray-600">
+                Thời gian: Mỗi tối thứ 5 đến thứ 7 và bữa trưa Chủ Nhật hàng
+                tuần, đến hết tháng 10.
+              </p>
+              <a
+                href="#dining"
+                class="inline-block mt-6 bg-meridien-blue text-white hover:bg-meridien-gold py-2 px-6 rounded-full font-semibold transition duration-300"
+              >
+                KHÁM PHÁ BUFFET
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-meridien-blue text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h4 class="text-xl font-serif font-bold mb-4 text-meridien-gold">
+          LE MÉRIDIEN SAIGON
+        </h4>
+        <p class="text-sm mb-2">
+          Đường Tôn Đức Thắng, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh
+        </p>
+        <p class="text-sm mb-6">
+          Liên Hệ Đặt Phòng:
+          <a
+            href="tel:+842862636688"
+            class="text-meridien-gold hover:underline font-medium"
+            >+84 28 6263 6688</a
+          >
+        </p>
+        <div class="flex justify-center space-x-4">
+          <a
+            href="#"
+            class="text-white hover:text-meridien-gold transition duration-300"
+            >Facebook</a
+          >
+          <a
+            href="#"
+            class="text-white hover:text-meridien-gold transition duration-300"
+            >Instagram</a
+          >
+          <a
+            href="#"
+            class="text-white hover:text-meridien-gold transition duration-300"
+            >Marriott Bonvoy</a
+          >
+        </div>
+        <p class="text-xs mt-6 opacity-70">
+          &copy; 2025 Le Méridien Saigon. Thuộc tập đoàn Marriott International.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobile-menu");
+          const isExpanded =
+            this.getAttribute("aria-expanded") === "true" || false;
+          this.setAttribute("aria-expanded", !isExpanded);
+          mobileMenu.classList.toggle("hidden");
+        });
+
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          const mobileMenu = document.getElementById("mobile-menu");
+          const menuButton = document.getElementById("mobile-menu-button");
+          mobileMenu.classList.add("hidden");
+          menuButton.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      window.addEventListener("load", adjustHeroHeight);
+      window.addEventListener("resize", adjustHeroHeight);
+    </script>
+  </body>
+</html>
